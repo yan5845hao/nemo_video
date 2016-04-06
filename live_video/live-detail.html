@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>小鱼直播详情</title>
+    <link rel="stylesheet" href="css/layout.css?m=5">
+    <script>
+        function load () {
+
+//            var width= document.getElementById("player").offsetWidth;
+//            var height = width/1280*800;
+//            document.getElementById("player").style.height=height.toString()+"px";
+
+            //tab切换事件
+            document.getElementById("nav-left").onclick=function(){
+                document.getElementById("live-detail").style.display="block";
+                document.getElementById("chat").style.display="none";
+                document.getElementById("nav-left-title").className="nav-title-active";
+                document.getElementById("nav-right-title").className="nav-title";
+            };
+            document.getElementById("nav-right").onclick=function(){
+                document.getElementById("live-detail").style.display= "none";
+                document.getElementById("chat").style.display="block";
+                document.getElementById("nav-left-title").className="nav-title";
+                document.getElementById("nav-right-title").className="nav-title-active";
+            };
+////            初始化页面
+//            tabInit();
+
+        }
+        function tabInit(){
+            document.getElementById("nav-left").onclick();
+        }
+
+        function start(){
+            document.getElementById("img-liveStart").style.display="block";
+            document.getElementById("img-livesEnd").style.display="none";
+            document.getElementById("live-video").style.display="none";
+        }
+        function end(){
+            document.getElementById("img-liveStart").style.display="none";
+            document.getElementById("img-livesEnd").style.display="block";
+            document.getElementById("live-video").style.display="none";
+        }
+        function play(){
+            document.getElementById("img-liveStart").style.display="none";
+            document.getElementById("img-livesEnd").style.display="none";
+            document.getElementById("live-video").style.display="block";
+        }
+//        当输入昵称时,自动滑动滚动条.
+        function scollLogin(){
+//            var posterHeight=document.getElementById("poster").offsetHeight;
+//            document.getElementById("chat").scrollTop = -(posterHeight+100);
+//            alert("-(posterHeight+100)");
+        }
+
+
+
+    </script>
+</head>
+<body style="background-color: white;" onload="load();" onresize="scollLogin();">
+<div class="liveDetail-container">
+    <div class="poster" id="poster">
+        <img id="img-liveStart" src="img/start.jpg">
+        <!--<video src="http://vodcdn.ainemo.com/vodfiles/sharefiles/20163/641b46bc-a4d6-40b0-b6f4-d07d017c5963.mp4"  controls="controls" id="live-video"></video>-->
+        <!--<img id="img-livesEnd" src="img/start.jpg">-->
+        <!--<div id="player"></div>-->
+    </div>
+    <nav class="liveDetail-nav">
+        <div class="nav-left" id="nav-left">
+            <div class="nav-title-active" id="nav-left-title">
+                活动详情
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="nav-right" id="nav-right">
+            <div class="nav-title" id="nav-right-title">
+                问答
+            </div>
+        </div>
+    </nav>
+    <!--活动详情-->
+    <div class="live-detail-bg" id="live-detail">
+        <div class="edit" id="edit-live">编辑</div>
+        <section class="liveDetail-content">
+            <ul>
+                <li class="live-detail-title">小鱼儿分享会5</li>
+                <li class="live-detail-subtitle">2016年3月9日 14:00-15:00</li>
+                <li class="live-detail-subtitle location">北京小鱼儿科技地中海会议室</li>
+                <li class="live-detail-content">回到了大本营,我们又可以开启每周的技术交流活动了.这几个月大家做了很多有意思的功能,要不要分享一下呀!
+                    回到了大本营,我们又可以开启每周的技术交流活动了.这几个月大家做了很多有意思的功能,要不要分享一下呀!
+                    回到了大本营,我们又可以开启每周的技术交流活动了.这几个月大家做了很多有意思的功能,要不要分享一下呀!
+                    回到了大本营,我们又可以开启每周的技术交流活动了.这几个月大家做了很多有意思的功能,要不要分享一下呀!
+                    回到了大本营,我们又可以开启每周的技术交流活动了.这几个月大家做了很多有意思的功能,要不要分享一下呀!
+                    回到了大本营,我们又可以开启每周的技术交流活动了.这几个月大家做了很多有意思的功能,要不要分享一下呀!
+                    回到了大本营,我们又可以开启每周的技术交流活动了.这几个月大家做了很多有意思的功能,要不要分享一下呀!
+                </li>
+            </ul>
+        </section>
+        <footer class="liveDetail-footer">
+            <button id="btn-delete-live">删除直播</button>
+        </footer>
+    </div>
+    <!--问答-->
+    <div id="chat" class="hide">
+        <!--问答登录-->
+        <div  class="live-detail-bg" id="chat-login">
+            <div class="live-detail-userBlock">
+                <div class="chat-userLabel" >昵称c</div>
+                <div class="live-detail-userName"><input type="text" placeholder="请输入昵称" class="chat-userName" id="input-name" onfocus="scollLogin();" style="margin-bottom: 2em;"></div>
+            </div>
+            <footer class="liveDetail-footer chat-login-footer" style="text-align: center;">
+                <button id="button-login-next" style="margin-bottom: 1em; width: 80%;">下一步</button>
+            </footer>
+        </div>
+        <!--问答主界面-->
+        <div class="live-detail-bg hide" id="chat-content">
+            <div class="print-wall" id="print-wall" >
+                <!--<p class="chat-bar">-->
+                <!--<span class="chat-user">Helen</span> <span class="chat-time">20:28:20</span><br/>-->
+                <!--<span class="chat-detail">这里是Helen说的话</span>-->
+                <!--</p>-->
+                <!--<p class="chat-bar">-->
+                <!--<span class="chat-user">Helen</span> <span class="chat-time">20:28:20</span><br/>-->
+                <!--<span class="chat-detail">这里是Helen说的话</span>-->
+                <!--</p>-->
+            </div>
+            <div class="chat-footer" id="chat-footer">
+                <input id="input-send" class="input-send" type="text">
+                <div id="send-btn" class="btn-send">发送</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--聊天插件-->
+<!-- 引入插件，兼容低 IE8+ 等低版本浏览器，注意看下面的注释。如果不需要兼容，可以去掉这部分。 -->
+<!--[if lt IE 10]>
+<script type="text/javascript" src="js/swfobject.js"></script>
+<script type="text/javascript" src="js/web_socket.js"></script>
+<script type="text/javascript">
+    // 设置变量，配置插件中 WebSocketMain.swf 的引用路径
+    WEB_SOCKET_SWF_LOCATION = "js/WebSocketMain.swf";
+</script>
+<![endif]-->
+<!-- 引入插件部分结束 -->
+
+<!-- 引入 LeanCloud 实时通信 SDK -->
+<script src="js/AV.realtime.min.js"></script>
+<!-- Demo 逻辑文件 -->
+<script src="js/chat.js?v=15"></script>
+</body>
+</html>

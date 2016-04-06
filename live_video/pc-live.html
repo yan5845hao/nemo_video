@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小鱼直播</title>
+    <link href="css/layout.css" rel="stylesheet"/>
+    <script type="text/javascript" src="http://devcdn.ainemo.com/page/js/swfobject.js"></script>
+    <script>
+        function load () {
+            var flashvars = {
+                src: escape("http://vodcdn.ainemo.com/vodfiles/sharefiles/20163/641b46bc-a4d6-40b0-b6f4-d07d017c5963.mp4"),
+                plugin_m3u8: "http://devcdn.ainemo.com/page/tools/HLSProviderOSMF.swf",
+            };
+            var params = {
+                allowFullScreen: true,
+                allowScriptAccess: "always",
+                bgcolor: "#000000"
+            };
+            var attrs = {
+                name: "player"
+            };
+
+            swfobject.embedSWF(
+                    "http://devcdn.ainemo.com/page/tools/StrobeMediaPlayback.swf",
+                    "player",
+                    "1280", "800",
+                    "10.2",
+                    null, flashvars, params, attrs
+            );
+            var width= document.getElementById("player").offsetWidth;
+            var height = width/1280*800;
+            document.getElementById("player").style.height=height.toString()+"px";
+        }
+        function start(){
+            document.getElementById("img-liveStart").style.display="block";
+            document.getElementById("img-livesEnd").style.display="none";
+            document.getElementById("live-video").style.display="none";
+        }
+        function end(){
+            document.getElementById("img-liveStart").style.display="none";
+            document.getElementById("img-livesEnd").style.display="block";
+            document.getElementById("live-video").style.display="none";
+        }
+        function play(){
+            document.getElementById("img-liveStart").style.display="none";
+            document.getElementById("img-livesEnd").style.display="none";
+            document.getElementById("live-video").style.display="block";
+        }
+
+    </script>
+</head>
+<body>
+    <div class="live-pc-container">
+        <div class="title-container">
+            <div class="title">
+                小鱼儿科技分享会
+            </div>
+            <div class="copy">
+                <button>复制链接至剪切板</button>
+            </div>
+        </div>
+
+        <div class="subtitle">
+            <ul>
+                <li>2015年03月09日 14:00-15:00</li>
+                <li class="location">北京小鱼儿科技地中海会议室</li>
+            </ul>
+        </div>
+        <div class="bg">
+            <!--<img src="img/pc-watch.png">-->
+            <div id="player"></div>
+        </div>
+        <div class="detail-content">
+            <h2>活动详情</h2>
+            <p>回到了大本营，我们又可以开启每周的技术交流活动
+                了。这几个月大家做了很多有意思的功能，我列在下面，希
+                望大家都可以来分享。大概是这个顺序了，大家可以提前准
+                备下，如果要调换顺序可以来找我，^_^</p>
+        </div>
+
+    </div>
+</body>
+</html>

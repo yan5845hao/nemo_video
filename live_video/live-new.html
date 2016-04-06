@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>新建直播活动</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <script>
+        function showBeginTime(x){
+            var beginTime = document.getElementById(x).value.replace("T","   ");
+            var b2=beginTime.substring(0,18);
+            document.getElementById("start-time-text").setAttribute("value",b2);
+        }
+        function showEndTime(x){
+            var endTime = document.getElementById(x).value.replace("T","   ");
+            var b2=endTime.substring(0,18);
+            document.getElementById("end-time-text").setAttribute("value",b2);
+        }
+    </script>
+</head>
+<body>
+    <section class="container">
+        <ul>
+            <li class="title-bar">时间</li>
+            <li class="content-bar special-padding">
+                <div id="begin-time">
+                    <label>开始</label>
+                    <input type="text" id="start-time-text" style="padding-left: 2em;width: 145px;"/>
+                    <input type="datetime-local" id="start-time-picker" style="position: absolute;left:50px;width:200px;opacity: 0;" onchange="showBeginTime(this.id)" /><!--onblur="showBeginTime(this.id)"-->
+                </div>
+            </li>
+            <li class="content-bar">
+                <label>结束</label>
+                <input type="text" id="end-time-text" style="padding-left: 2em;width: 145px;"/>
+                <input type="datetime-local" id="end-time-picker" style="position: absolute;left: 50px;width: 200px;opacity: 0" onchange="showEndTime(this.id)" /><!--onblur="showEndTime(this.id)"-->
+            </li>
+            <li class="title-bar">标题</li>
+            <li class="content-bar"><input type="text" style="width: 90%;"></li>
+            <li class="title-bar">地点(选填)</li>
+            <li class="content-bar"><input type="text" style="width: 90%;"></li>
+            <li class="title-bar">详情(选填)</li>
+            <li class="content-bar"><textarea></textarea></li>
+        </ul>
+    </section>
+    <footer>
+        <div class="footer-bar">
+            <button type="submit" id="submit" >提交</button>
+        </div>
+    </footer>
+</body>
+</html>

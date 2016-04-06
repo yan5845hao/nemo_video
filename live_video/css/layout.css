@@ -1,0 +1,366 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #EFEEF3;
+    font-family: 'Microsoft YaHei', '微软雅黑', 'Helvetica Neue', 'Helvetica', 'Arial', 'tahoma', sans-serif;
+    font-weight: 200;
+    font-size:14px;
+}
+
+
+.container input{
+    color: #535353;
+}
+.container textarea{
+    color: #535353;
+}
+.title-bar{
+    color: #98979b;
+    margin:0.5em 15px;
+    padding-top: 1em;
+    font-size: 12px;
+}
+.content-bar{
+    background-color: #fff;
+    font-size:14px;
+    color: #535353;
+    padding: 0.8em 0 0.8em 15px;
+}
+.special-padding{
+    padding-top:0.8em;
+    padding-left: 15px;
+    padding-bottom: 0;
+}
+
+#begin-time{
+    padding-bottom: 0.8em;
+    border-bottom: 1px solid RGBA(239,238,243,0.5);
+}
+.datePicker{
+    padding-left: 3em;
+    width: 200px;
+}
+
+.datePicker2 input[type=datetime-local]{
+    background-color: transparent;
+    outline: none;
+    border: 0;
+}
+.container ul{
+    list-style: none;
+}
+
+input{
+    outline-width: 0px;
+    border: 0px;
+    font-size: 1.2em;
+}
+textarea{
+    outline-width: 0px;
+    border: 0px;
+    font-size: 1em;
+    width:90%;
+    height: 10em;
+}
+.footer-bar button{
+    width: 100%;
+    background-color: #fa7f66;
+    color: white;
+    margin-top: 42px;
+    font-size: 1.2em;
+    height: 3em;
+    border: 0;
+}
+
+
+/*直播详情*/
+.poster{
+}
+.poster img{
+    width: 100%;
+    vertical-align: bottom;
+}
+.poster video{
+    width: 100%;
+    vertical-align: bottom;
+}
+.liveDetail-container ul{
+    list-style: none;
+}
+
+.live-detail-bg{
+    margin: 25px 2em;
+    color: #535353;
+    background-color: white;
+}
+
+.liveDetail-content{
+    margin-bottom: 6em;
+
+}
+.live-detail-title{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+.live-detail-subtitle{
+    /*font-size: 0.9em;*/
+    font-weight: bold;
+    line-height: 1.6;
+    color: #999;
+}
+.live-detail-content{
+    margin-top: 0.75em;
+    color: RGBA(0,0,0,0.8);
+    line-height: 1.6;
+    font-size: 1.15em;
+}
+.location{
+    background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAZCAYAAAA8CX6UAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RTZCN0FCMjNFQThGMTFFNUJEMDM4MjMyNURCMjQxOUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RTZCN0FCMjRFQThGMTFFNUJEMDM4MjMyNURCMjQxOUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCOTQwRDg5RUVBOEYxMUU1QkQwMzgyMzI1REIyNDE5RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpFNkI3QUIyMkVBOEYxMUU1QkQwMzgyMzI1REIyNDE5RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PmP0xioAAAF4SURBVHjapJU9SwNBEIY3Fz1SBLQQQU/8QPwBFlpZCDYWFv5Uy1QqYmMsBBUtRBE0fmKicIZcjMZ3YBbWcW7diy88JDezO9mbfXdTMromwTxIQJVjKWiAK/78oZJ4HgUrXMinO7APXrVCE2AdDJswfYAauKeHsrOSDRCbcNHcOXANOhEHVwsWsYp5rhniho4rg95A3WksjVsGI2IczU1oeYtgTCSpiVvgBXwyFLsAs6Aixn9FOTt0CLpKvMu5X3aJHJ+4anj6cqvEqhEv+9+iQu9KPPHMmVJiKRV6VhJLOXaIOSf1SLvWAwsiUeHdafOKadwMWGPzSh3YI7KZ46UQPZFVrLN3yQsDFtqzzbYGPB2gyCVouoWsCVsFiqR8lRhZiPy0U+AVqR2ZexW4ajs3pE/H4FwaUuqIdyJPTe28aYX6/Io9JUevv60dq3LOr2bMtIjX+UY0ISuyOhMnnS78E9+hDdmZjL/3fRf4X/8U5Jcb8OAb+C3AAEXUUqGrF6jyAAAAAElFTkSuQmCC")  no-repeat left ;
+    background-size: 9px 12px;
+    padding-left: 1em;
+}
+.edit{
+    font-weight: bold;
+    color: #fa7f66;
+    float: right;
+    padding:0.2em 1em;
+    border: 1px solid #fa7f66;
+    border-radius: 2px;
+}
+.liveDetail-footer{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.liveDetail-footer button{
+    width: 100%;
+    background-color: #E1504D;
+    color: white;
+    margin-top: 3em;
+    font-size: 1.2em;
+    height: 3em;
+    border-width: 0px;
+    border-radius: 2px;
+
+}
+
+/*导航条*/
+.liveDetail-nav{
+    background-color: #eee;
+    height: 40px;
+}
+.nav{
+    width: 100%;
+}
+.nav-left{
+    width: 50%;
+    float: left;
+    text-align: center;
+    /*border-bottom: 2px solid #fa7f66;*/
+    /*去掉点击时默认的阴影*/
+    -webkit-appearance : none;
+    -webkit-tap-highlight-color:transparent;
+
+}
+.nav-right{
+    margin-left: 50%;
+    height: 40px;
+    text-align: center;
+    -webkit-appearance : none;
+    -webkit-tap-highlight-color:transparent;
+}
+.nav-title-active{
+    /*border-right: 1px solid #d6d6d6;*/
+    font-size: 16px;
+    color: #ff7f66;
+    font-weight:bold;
+    display: inline-block;
+    line-height: 38px;
+    border-bottom: 2px solid #ff7f66;
+}
+.line{
+    height: 30px;
+    position: absolute;
+    left: 50%;
+    margin-top: 5px;
+    border-left: 1px solid #d6d6d6;
+}
+.nav-title{
+    /*padding: 0.8em;*/
+    color: #5e5d60;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 38px;
+}
+
+/*pc直播*/
+.live-pc-container{
+    margin: 50px 15%;
+    color: #3E3E3E;
+}
+.live-pc-container .title-container{
+    font-size: 2em;
+    font-weight: bold;
+    color: #181818;
+    line-height: 2em;
+    border-bottom: 1px solid #e6e6e6;
+    position: relative;
+}
+
+.live-pc-container .copy{
+    position: absolute;
+    top:0;
+    right: 0;
+}
+.live-pc-container .copy button{
+    border-radius: 2px;
+    background: transparent;
+    /*line-height: */
+    padding: 0.5em 1em;
+    border: 1px solid #676767;
+    outline: none;
+}
+.live-pc-container .subtitle ul{
+    list-style: none;
+    line-height: 3em;
+}
+.live-pc-container .subtitle li{
+    display: inline;
+}
+
+.live-pc-container .subtitle li:last-child{
+    margin-left: 2em;
+}
+.live-pc-container .bg img{
+    width: 100%;
+
+}
+.detail-content{
+    margin: 2em 0;
+}
+
+.live-pc-container h2{
+    font-size: 1.5em;
+    line-height: 2;
+    color: #fa7f66;
+}
+.live-pc-container p{
+    line-height: 2;
+}
+#live-video{
+    width: 100%;
+}
+#player{
+    width: 100%;
+}
+
+/*直播问答*/
+.live-detail-userBlock{
+    text-align: center;
+    line-height: 3;
+    margin-top: 3em;
+}
+.chat-userName{
+    font-size: 14px;
+    border: 1px solid #d6d6d6;
+    line-height: 3;
+    border-radius: 2px;
+    width: 70%;
+    text-align: center;
+}
+
+#button-login-next{
+    background-color: #fa7f66;
+    outline-width: 0;
+}
+.button-bottom{
+    position: absolute;
+    bottom: 2em;
+    margin: 0 2em;
+}
+/*.chat-login-footer{*/
+    /*position: fixed;*/
+    /*left: 2em;*/
+    /*right: 2em;*/
+    /*bottom: 2em;*/
+/*}*/
+/*问答详情*/
+.print-wall{
+    line-height: 1.5;
+}
+
+.chat-content .chat-bar{
+    margin-bottom: 2em;
+    font-size: 11px;
+}
+.chat-user{
+    color: #fa7f66;
+    font-weight: 300;
+}
+.chat-time{
+    color: #b8b8b8;
+    padding-left: 1em;
+}
+.chat-detail{
+    color: RGBA(0,0,0,0.8);
+    font-size: 14px;
+    font-weight: 300;
+}
+.chat-footer{
+    background-color: #eee;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-top: 1px solid #d6d6d6;
+    border-bottom:1px solid #d6d6d6;
+    height: 3em;
+}
+.input-send{
+    width: 80%;
+    height: 2em;
+    border: 1px solid #d6d6d6;
+    border-radius: 2px;
+    float: left;
+    /*margin-top: 0.25em;*/
+    margin: 0.2em 0 0.2em 0.2em;
+    color: RGBA(0,0,0,0.8);
+}
+.btn-send{
+    height: 3em;
+    line-height: 2.5;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: #5e5d60;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+#print-wall{
+    overflow: auto;
+    margin-bottom: 5em;
+    font-size: 13px;
+    -webkit-overflow-scrolling: touch;
+}
+.hide{
+    display: none;
+}
+
+input[type=text]{
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance : none;
+}
+input[type=datetime-local]{
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance : none;
+}
+.btn-send{
+    font-weight: bolder;
+    color:RGBA(0,0,0,0.9);
+}
